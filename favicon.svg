@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8ef7"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="#0d1117"/>
+  <!-- Border subtle -->
+  <rect width="64" height="64" rx="14" fill="none" stroke="url(#grad)" stroke-width="1.5" opacity="0.5"/>
+  <!-- < bracket -->
+  <text x="3" y="44" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="22" font-weight="700" fill="url(#grad)">&lt;</text>
+  <!-- GM text -->
+  <text x="17" y="44" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="20" font-weight="800" fill="#f0f6ff">GM</text>
+  <!-- /> bracket -->
+  <text x="44" y="44" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="22" font-weight="700" fill="url(#grad)">/&gt;</text>
+</svg>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Gabriel Melo – Analista de Dados e Desenvolvedor especializado em Business Intelligence, Python e análise de dados." />
+  <meta name="keywords" content="Gabriel Melo, Analista de Dados, Business Intelligence, Power BI, Python, Portfólio, Data Science" />
+  <meta name="author" content="Gabriel Melo" />
+  <meta property="og:title" content="Gabriel Melo | Data & Dev Portfolio" />
+  <meta property="og:description" content="Analista de Dados e Desenvolvedor – Transformando dados em decisões inteligentes." />
+  <title>Gabriel Melo | Data & Dev Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body>
+
+  <!-- ========== PARTICLES CANVAS ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== NAV ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>GM<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" id="nav-about">Sobre</a></li>
+        <li><a href="#skills" id="nav-skills">Skills</a></li>
+        <li><a href="#projects" id="nav-projects">Projetos</a></li>
+        <li><a href="#contact" id="nav-contact">Contato</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" id="nav-hire">Vamos Conversar</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponível para novos projetos
+      </div>
+      <h1 class="hero-title">
+        <span class="line-1">Gabriel Melo</span>
+        <span class="line-2">
+          <span class="typed-wrapper">
+            <span id="typed-text"></span><span class="cursor-blink">|</span>
+          </span>
+        </span>
+      </h1>
+      <p class="hero-subtitle">
+        Transformo dados brutos em <strong>insights poderosos</strong> e desenvolvo soluções que geram resultados reais. 
+        Especialista em BI, Python e análise de dados.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6l3 3 3-3v6M12 3v4M4.222 10.222A8 8 0 1 0 19.778 10.222"/></svg>
+          Ver Projetos
+        </a>
+        <a href="#contact" class="btn btn-outline" id="hero-contact-btn">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Entrar em Contato
+        </a>
+      </div>
+      <div class="hero-tech-stack">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Power BI</span>
+        <span class="tech-pill">SQL</span>
+        <span class="tech-pill">Excel</span>
+        <span class="tech-pill">Azure</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="data-card card-1">
+        <div class="card-header">
+          <span class="card-dot green"></span>
+          <span class="card-dot yellow"></span>
+          <span class="card-dot red"></span>
+        </div>
+        <div class="card-content">
+          <div class="code-line"><span class="kw">import</span> pandas <span class="kw">as</span> pd</div>
+          <div class="code-line"><span class="kw">import</span> matplotlib</div>
+          <div class="code-line blank"></div>
+          <div class="code-line"><span class="fn">df</span> = pd.read_csv(<span class="str">'dados.csv'</span>)</div>
+          <div class="code-line"><span class="cm"># Análise avançada ↓</span></div>
+          <div class="code-line"><span class="fn">df</span>.describe()</div>
+        </div>
+      </div>
+      <div class="data-card card-2">
+        <div class="mini-chart">
+          <div class="chart-title">Receita Mensal</div>
+          <div class="bar-chart">
+            <div class="bar" style="height:40%" data-val="R$12k"></div>
+            <div class="bar" style="height:65%" data-val="R$18k"></div>
+            <div class="bar" style="height:50%" data-val="R$15k"></div>
+            <div class="bar active" style="height:90%" data-val="R$28k"></div>
+            <div class="bar" style="height:75%" data-val="R$22k"></div>
+            <div class="bar" style="height:85%" data-val="R$26k"></div>
+          </div>
+          <div class="chart-label">↑ 43% vs último mês</div>
+        </div>
+      </div>
+      <div class="data-card card-3">
+        <div class="kpi-grid">
+          <div class="kpi"><span class="kpi-value">98%</span><span class="kpi-label">Precisão</span></div>
+          <div class="kpi"><span class="kpi-value">2.4x</span><span class="kpi-label">ROI Médio</span></div>
+        </div>
+      </div>
+      <div class="hero-orbit">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-dot dot-1"></div>
+        <div class="orbit-dot dot-2"></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Role para explorar</span>
+      <div class="scroll-arrow">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m0 0-7-7m7 7 7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// about_me.py</span>
+        <h2 class="section-title">Sobre <span class="gradient-text">Mim</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="photo-frame" id="about-photo-frame">
+            <div class="photo-glow"></div>
+            <img src="gabriel_profile.png" alt="Gabriel Melo – Analista de Dados" id="profile-photo" />
+            <div class="photo-badge">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 12 2 2 4-4"/></svg>
+              Aberto a oportunidades
+            </div>
+          </div>
+          <div class="about-social">
+            <a href="https://linkedin.com/in/gabriel-melo" target="_blank" id="social-linkedin" class="social-btn linkedin" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/gabriel-melo" target="_blank" id="social-github" class="social-btn github" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <p class="about-lead">
+            Olá! Sou <strong>Gabriel Melo</strong>, analista de dados e desenvolvedor apaixonado por transformar 
+            complexidade em clareza. Com experiência sólida em <strong>Business Intelligence</strong>, 
+            <strong>Python</strong> e desenvolvimento de dashboards, ajudo empresas a tomar decisões 
+            mais inteligentes baseadas em dados reais.
+          </p>
+          <p class="about-body">
+            Minha jornada começou na programação e evoluiu naturalmente para o universo dos dados. 
+            Hoje combino habilidades técnicas em análise estatística, modelagem de dados e visualização 
+            com uma visão de negócios que garante soluções que realmente fazem diferença.
+          </p>
+          <p class="about-body">
+            Quando não estou mergulhado em dados, estou aprendendo novas tecnologias, 
+            contribuindo com projetos e explorando como a inteligência artificial pode 
+            ampliar ainda mais o poder da análise de dados.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div>
+                <strong>Foco em Resultados</strong>
+                <p>Cada análise tem como objetivo gerar valor mensurável para o negócio</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div>
+                <strong>Aprendizado Contínuo</strong>
+                <p>Sempre atualizado com as últimas tendências em Data Analytics e Dev</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div>
+                <strong>Colaboração</strong>
+                <p>Trabalho bem em equipe e comunico resultados técnicos de forma clara</p>
+              </div>
+            </div>
+            <div class="highlight-item highlight-edu">
+              <div>
+                <strong>Tecnologia em Ciência de Dados</strong>
+                <p>UNINTER &middot; 2024 – 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// skills.json</span>
+        <h2 class="section-title">Stack <span class="gradient-text">Técnica</span></h2>
+        <p class="section-sub">Ferramentas e tecnologias que domino para criar soluções de dados de ponta</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <h3>Business Intelligence</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item" data-level="92">
+              <div class="skill-info"><span class="skill-name">Power BI</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="92%"></div></div>
+            </div>
+            <div class="skill-item" data-level="85">
+              <div class="skill-info"><span class="skill-name">Power Query</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item" data-level="80">
+              <div class="skill-info"><span class="skill-name">DAX</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="80%"></div></div>
+            </div>
+            <div class="skill-item" data-level="75">
+              <div class="skill-info"><span class="skill-name">Tableau / Looker</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <h3>Programação & Dados</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item" data-level="88">
+              <div class="skill-info"><span class="skill-name">Desenvolvimento Web (Flask/FastAPI)</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="88%"></div></div>
+            </div>
+            <div class="skill-item" data-level="85">
+              <div class="skill-info"><span class="skill-name">Pandas / NumPy</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="85%"></div></div>
+            </div>
+            <div class="skill-item" data-level="78">
+              <div class="skill-info"><span class="skill-name">Matplotlib / Seaborn</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="78%"></div></div>
+            </div>
+            <div class="skill-item" data-level="70">
+              <div class="skill-info"><span class="skill-name">Desenvolvimento FrontEnd (VUE / Next.js)</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="70%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <h3>Banco de Dados</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item" data-level="90">
+              <div class="skill-info"><span class="skill-name">SQL (T-SQL / PL-SQL)</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item" data-level="82">
+              <div class="skill-info"><span class="skill-name">PostgreSQL</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="82%"></div></div>
+            </div>
+            <div class="skill-item" data-level="75">
+              <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="75%"></div></div>
+            </div>
+            <div class="skill-item" data-level="65">
+              <div class="skill-info"><span class="skill-name">MongoDB</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <h3>Ferramentas & Cloud</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item" data-level="80">
+              <div class="skill-info"><span class="skill-name">Excel Avançado</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="95%"></div></div>
+            </div>
+            <div class="skill-item" data-level="72">
+              <div class="skill-info"><span class="skill-name">Azure Data Factory</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="72%"></div></div>
+            </div>
+            <div class="skill-item" data-level="90">
+              <div class="skill-info"><span class="skill-name">Git / GitHub</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="90%"></div></div>
+            </div>
+            <div class="skill-item" data-level="80">
+              <div class="skill-info"><span class="skill-name">Docker / APIs REST</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// projects.py</span>
+        <h2 class="section-title">Projetos <span class="gradient-text">em Destaque</span></h2>
+        <p class="section-sub">Projetos reais desenvolvidos ao longo da minha carreira — cada um com contexto, stack e resultados detalhados</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Todos</button>
+        <button class="filter-btn" data-filter="bi" id="filter-bi">Business Intelligence</button>
+        <button class="filter-btn" data-filter="python" id="filter-python">Python / Backend</button>
+        <button class="filter-btn" data-filter="cloud" id="filter-cloud">Cloud & ETL</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- ── PROJETO 1 – GC Explorer SaaS ── -->
+        <div class="project-card featured" data-category="python" id="project-gc-explorer">
+          <div class="featured-badge">Projeto Principal</div>
+          <div class="project-img-wrap">
+            <img src="gc_explorer.png" alt="GC Explorer – Plataforma SaaS de BI" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag python-tag">SaaS / Backend</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot"></span>Gestão Correta Consultoria &middot; 2025 – atual
+            </div>
+            <h3 class="project-title">GC Explorer – Plataforma SaaS de Business Intelligence</h3>
+            <p class="project-desc">
+              Desenvolvimento completo do backend de uma plataforma SaaS multi-tenant para gestão e 
+              consumo centralizado de dashboards Power BI. Empresas clientes acessam seus relatórios 
+              com controle de acesso por usuário/empresa, planos de assinatura e autenticação 
+              corporativa via <strong>Microsoft Entra ID (OAuth2)</strong>. Fui responsável por toda 
+              a arquitetura, modelagem de banco de dados com SQLAlchemy e integração com IA generativa.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Arquitetura</h4>
+                <ul>
+                  <li>API RESTful com FastAPI + Uvicorn</li>
+                  <li>ORM SQLAlchemy com MySQL</li>
+                  <li>Autenticação OAuth2 via Microsoft Entra ID</li>
+                  <li>Deploy containerizado na Azure</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Funcionalidades</h4>
+                <ul>
+                  <li>Multi-tenant com isolamento por empresa</li>
+                  <li>Gestão de planos e assinaturas</li>
+                  <li>Embed de relatórios Power BI por rota</li>
+                  <li>Integração com OpenAI / IA generativa</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>MySQL</span>
+              <span>Azure</span><span>Microsoft Entra ID</span><span>OpenAI API</span><span>N8N</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">100%</span><span class="r-label">Backend próprio</span></div>
+              <div class="result-item"><span class="r-val">Multi</span><span class="r-label">Tenant</span></div>
+              <div class="result-item"><span class="r-val">SaaS</span><span class="r-label">Em produção</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Gabriel-M3LO" target="_blank" class="proj-btn proj-demo" id="demo-gc-explorer">GitHub</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-gc-explorer">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 2 – Azure ETL / Integração em Nuvem ── -->
+        <div class="project-card" data-category="cloud" id="project-azure-etl">
+          <div class="project-img-wrap">
+            <img src="azure_etl.png" alt="Pipeline ETL – Azure Data Factory" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag cloud-tag">Azure / ETL</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot"></span>Gestão Correta Consultoria &middot; 2025
+            </div>
+            <h3 class="project-title">Pipeline ETL em Nuvem – Azure Data Factory</h3>
+            <p class="project-desc">
+              Liderança e desenvolvimento de integração completa em nuvem de bancos de dados de múltiplos 
+              clientes. Substituiu por completo extrações e tratamentos manuais feitos em Excel, migrando 
+              para uma arquitetura automatizada e escalável na Microsoft Azure — desde a extração de 
+              fontes heterogêneas até a carga no <strong>Azure Blob Storage</strong> consumido pelo Power BI.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Processo ETL</h4>
+                <ul>
+                  <li>Extração: MySQL, Oracle, SQL Server</li>
+                  <li>Transformação: Azure Data Flows + Python</li>
+                  <li>Carga: Azure Blob Storage (Parquet/CSV)</li>
+                  <li>Trigger agendado automático (diário)</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Impacto</h4>
+                <ul>
+                  <li>Eliminação de processos manuais em Excel</li>
+                  <li>Atualização automática dos dashboards BI</li>
+                  <li>Múltiplos clientes integrados</li>
+                  <li>Redução de erros humanos ~100%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Azure Data Factory</span><span>Azure Blob Storage</span><span>Python</span>
+              <span>MySQL</span><span>Oracle</span><span>SQL</span><span>Power BI</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">0</span><span class="r-label">Processos manuais</span></div>
+              <div class="result-item"><span class="r-val">Multi-DB</span><span class="r-label">Fontes integradas</span></div>
+              <div class="result-item"><span class="r-val">Diário</span><span class="r-label">Agendado auto.</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Gabriel-M3LO" target="_blank" class="proj-btn proj-demo" id="demo-azure-etl">GitHub</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-azure-etl">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 3 – Dashboards BI Financeiro & Comercial ── -->
+        <div class="project-card" data-category="bi" id="project-bi-financeiro">
+          <div class="project-img-wrap">
+            <img src="bi_dashboard.png" alt="Dashboards Financeiro e Comercial – Power BI" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag bi-tag">Power BI</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot"></span>Gestão Correta Consultoria &middot; 2025
+            </div>
+            <h3 class="project-title">Dashboards Financeiro & Comercial – End-to-End</h3>
+            <p class="project-desc">
+              Desenvolvimento de dashboards financeiros e comerciais de ponta a ponta no Power BI — 
+              principal fonte de receita da empresa. Entregues desde a modelagem dimensional (Star Schema) 
+              e ETL no Power Query com <strong>M Language</strong>, até medidas DAX avançadas e 
+              identidade visual criada no Figma. Publicados com atualização automática via Gateway e 
+              usados pelos clientes em processos de melhoria contínua.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Cobertura Analítica</h4>
+                <ul>
+                  <li>DRE, Fluxo de Caixa e Balanço</li>
+                  <li>Performance comercial por vendedor/região</li>
+                  <li>Indicadores de melhoria contínua</li>
+                  <li>Comparativos YoY, MoM e vs Meta</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Técnicas Aplicadas</h4>
+                <ul>
+                  <li>Modelagem dimensional Star Schema</li>
+                  <li>DAX: Time intelligence, CALCULATE, RANKX</li>
+                  <li>Power Query: ETL com M Language</li>
+                  <li>Design UI/UX no Figma</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Power BI</span><span>DAX</span><span>Power Query</span><span>M Language</span>
+              <span>SQL</span><span>Figma</span><span>Azure Gateway</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">E2E</span><span class="r-label">Modelagem→Pub.</span></div>
+              <div class="result-item"><span class="r-val">Receita</span><span class="r-label">Produto principal</span></div>
+              <div class="result-item"><span class="r-val">Auto</span><span class="r-label">Atualização</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="#contact" class="proj-btn proj-demo" id="demo-bi-financeiro">Ver Demo</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-bi-financeiro">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 4 – Dashboard Epidemiológico ── -->
+        <div class="project-card" data-category="bi" id="project-saude">
+          <div class="project-img-wrap">
+            <img src="covid_dashboard.png" alt="Dashboard Epidemiológico – Secretaria de Saúde de Itabuna" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag bi-tag">BI Saúde Pública</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot company-dot-green"></span>Secretaria de Saúde de Itabuna &middot; 2020–2025
+            </div>
+            <h3 class="project-title">Dashboard Epidemiológico – Gestão de Agravos & Insumos</h3>
+            <p class="project-desc">
+              Criação de dashboards para acompanhamento de gestão de insumos e agravos epidemiológicos 
+              no município de Itabuna/BA. Consolidava dados de notificações de COVID-19, estoque de 
+              insumos da rede de saúde e indicadores de vigilância epidemiológica — usados pela 
+              gestão municipal para tomada de decisão durante a pandemia. Em operação por 5 anos.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Cobertura</h4>
+                <ul>
+                  <li>Monitoramento diário de casos COVID-19</li>
+                  <li>Gestão de estoque de insumos de saúde</li>
+                  <li>Boletim epidemiológico automatizado</li>
+                  <li>Indicadores por bairro/unidade de saúde</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Tecnologias</h4>
+                <ul>
+                  <li>Extração automatizada com Python + VBA</li>
+                  <li>Dashboards em Power BI / Excel avançado</li>
+                  <li>Integração com sistemas SINAN / e-SUS</li>
+                  <li>Histórico de 5 anos de dados</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span><span>VBA</span><span>Power BI</span>
+              <span>Excel Avançado</span><span>SQL</span><span>SINAN</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">5 anos</span><span class="r-label">Em operação</span></div>
+              <div class="result-item"><span class="r-val">Diário</span><span class="r-label">Boletim auto.</span></div>
+              <div class="result-item"><span class="r-val">Munic.</span><span class="r-label">Itabuna/BA</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Gabriel-M3LO" target="_blank" class="proj-btn proj-demo" id="demo-saude">GitHub</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-saude">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 5 – DEEP / Instituto ATRI ── -->
+        <div class="project-card" data-category="python" id="project-deep">
+          <div class="project-img-wrap">
+            <img src="deep_atri.png" alt="DEEP – Digital Evidence Evaluation Profiler" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag python-tag">IA Generativa</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot company-dot-purple"></span>Instituto ATRI &middot; 2024
+            </div>
+            <h3 class="project-title">DEEP – Digital Evidence Evaluation Profiler</h3>
+            <p class="project-desc">
+              Desenvolvimento de microsserviços com <strong>Java Spring Boot</strong> para processamento 
+              e integração de evidências digitais em contexto forense. O DEEP combina modelagem relacional 
+              SQL com <strong>IA generativa via Google Gemini API</strong> para análise automatizada de 
+              evidências digitais. Projeto open-source hospedado na organização institute-atri no GitHub.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Arquitetura</h4>
+                <ul>
+                  <li>Microsserviços com Java Spring Boot</li>
+                  <li>Modelagem relacional SQL para evidências</li>
+                  <li>Integração API Gemini (IA generativa)</li>
+                  <li>REST APIs para integração de sistemas</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Diferenciais</h4>
+                <ul>
+                  <li>Processamento forense automatizado com IA</li>
+                  <li>Rastreabilidade completa de evidências</li>
+                  <li>Open-source no GitHub público</li>
+                  <li>Microsserviços escaláveis e desacoplados</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Java Spring</span><span>SQL</span><span>Gemini API</span>
+              <span>Microsserviços</span><span>REST API</span><span>IA Generativa</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">IA</span><span class="r-label">Generativa</span></div>
+              <div class="result-item"><span class="r-val">Open</span><span class="r-label">Source</span></div>
+              <div class="result-item"><span class="r-val">Forense</span><span class="r-label">Digital</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/institute-atri/deep" target="_blank" class="proj-btn proj-demo" id="demo-deep">Ver no GitHub</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-deep">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJETO 6 – Automação Python + VBA ── -->
+        <div class="project-card" data-category="python" id="project-automacao-covid">
+          <div class="project-img-wrap">
+            <img src="data_analysis.png" alt="Automação de Coleta Epidemiológica com Python e VBA" class="project-img" />
+            <div class="project-overlay">
+              <span class="project-tag python-tag">Python / VBA</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-company-badge">
+              <span class="company-dot company-dot-green"></span>Secretaria de Saúde de Itabuna &middot; 2020–2025
+            </div>
+            <h3 class="project-title">Automação de Coleta Epidemiológica – Python & VBA</h3>
+            <p class="project-desc">
+              Desenvolvimento de soluções em <strong>Python e VBA</strong> para automação da coleta 
+              de dados do agravo de COVID-19 nos sistemas governamentais (SINAN/e-SUS). O processo, 
+              antes feito manualmente pelos servidores, passou a ser executado automaticamente, 
+              gerando os arquivos para o boletim epidemiológico diário do município — reduzindo 
+              horas de trabalho e eliminando erros nos relatórios enviados ao Estado da Bahia.
+            </p>
+            <div class="project-detail-grid">
+              <div class="detail-block">
+                <h4>Solução Técnica</h4>
+                <ul>
+                  <li>Web scraping com Python (requests/bs4)</li>
+                  <li>Automação de planilhas com VBA + xlwings</li>
+                  <li>Geração automática de boletins diários</li>
+                  <li>Integração com SINAN e e-SUS</li>
+                </ul>
+              </div>
+              <div class="detail-block">
+                <h4>Resultados</h4>
+                <ul>
+                  <li>Coleta diária 100% automatizada</li>
+                  <li>Boletim gerado em minutos (vs horas)</li>
+                  <li>Zero erros de digitação manual</li>
+                  <li>Utilizado por 5+ anos consecutivos</li>
+                </ul>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span><span>VBA</span><span>Excel</span>
+              <span>Web Scraping</span><span>Pandas</span><span>xlwings</span>
+            </div>
+            <div class="project-results">
+              <div class="result-item"><span class="r-val">100%</span><span class="r-label">Automatizado</span></div>
+              <div class="result-item"><span class="r-val">Diário</span><span class="r-label">Coleta auto.</span></div>
+              <div class="result-item"><span class="r-val">5 anos</span><span class="r-label">Em uso</span></div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/Gabriel-M3LO" target="_blank" class="proj-btn proj-demo" id="demo-automacao-covid">GitHub</a>
+              <a href="#contact" class="proj-btn proj-code" id="contact-automacao">Saiba Mais</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// feedback.json</span>
+        <h2 class="section-title">O que dizem <span class="gradient-text">sobre mim</span></h2>
+      </div>
+      <div class="testimonials-track-wrap">
+        <div class="testimonials-track" id="testimonials-track">
+
+          <div class="testimonial-card" id="test-1">
+            <div class="test-quote">"</div>
+            <p class="test-text">Atuo com o Gabriel no desenvolvimento de dashboards e 
+              posso destacar seu alto domínio técnico em análise de dados.</p>
+            <div class="test-author">
+              <div class="test-avatar">H</div>
+              <div>
+                <strong>Henrique Rosádio</strong>
+                <span>Analista Sênior – Gestão Correta Consultoria</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" id="test-2">
+            <div class="test-quote">"</div>
+            <p class="test-text">Gabriel é um profissional analítico, detalhista e com uma vontade de 
+              aprender contagiante. Sua paciência e foco na qualidade o tornam um ativo valioso para qualquer 
+              equipe que busque precisão e crescimento constante. Recomendo muito seu trabalho!</p>
+            <div class="test-author">
+              <div class="test-avatar">J</div>
+              <div>
+                <strong>João Pedro Oliveira Japiassú</strong>
+                <span>Analista de Segurança do Trabalho – Veracel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="test-dots" id="test-dots">
+        <button class="test-dot active" data-idx="0" id="dot-0"></button>
+        <button class="test-dot" data-idx="1" id="dot-1"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// contact.send()</span>
+        <h2 class="section-title">Vamos <span class="gradient-text">Trabalhar Juntos?</span></h2>
+        <p class="section-sub">Tem um projeto em mente ou quer bater um papo sobre dados? Manda mensagem!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card" id="contact-email">
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:melo.gsousa@gmail.com">melo.gsousa@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-linkedin">
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://linkedin.com/in/gabrielmelopy" target="_blank">linkedin.com/in/gabrielmelopy</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-github">
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/Gabriel-M3LO" target="_blank">github.com/Gabriel-M3LO</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WhatsApp Composer -->
+        <div class="whatsapp-composer" id="whatsapp-composer">
+          <div class="wpp-header">
+            <div class="wpp-avatar">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.126 1.533 5.862L0 24l6.338-1.506A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.573-.497-5.063-1.363l-.363-.214-3.762.895.952-3.655-.238-.378A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div>
+              <strong>Gabriel Melo</strong>
+              <span class="wpp-status">Online</span>
+            </div>
+          </div>
+          <div class="wpp-bubble-wrap">
+            <div class="wpp-bubble">
+              Olá, Gabriel! Vi seu portfólio e gostaria de conversar sobre um projeto 👋
+            </div>
+          </div>
+          <div class="wpp-form">
+            <div class="form-group">
+              <label for="wpp-name">Seu nome</label>
+              <input type="text" id="wpp-name" placeholder="Como posso te chamar?" />
+            </div>
+            <div class="form-group">
+              <label for="wpp-subject">Assunto</label>
+              <select id="wpp-subject">
+                <option value="">Selecione o assunto...</option>
+                <option value="Projeto de BI / Dashboard">Projeto de BI / Dashboard</option>
+                <option value="Análise de Dados">Análise de Dados</option>
+                <option value="Desenvolvimento Backend (Python/FastAPI)">Desenvolvimento Backend (Python/FastAPI)</option>
+                <option value="Automação de Processos">Automação de Processos</option>
+                <option value="Pipeline ETL / Cloud Azure">Pipeline ETL / Cloud Azure</option>
+                <option value="Outro assunto">Outro assunto</option>
+              </select>
+            </div>
+
+            <button class="btn btn-wpp btn-full" id="wpp-send-btn" onclick="sendWhatsApp()">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.126 1.533 5.862L0 24l6.338-1.506A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.846 0-3.573-.497-5.063-1.363l-.363-.214-3.762.895.952-3.655-.238-.378A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Abrir no WhatsApp
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>GM<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Transformando dados em decisões inteligentes.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">Sobre</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projetos</a>
+          <a href="#contact">Contato</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Gabriel Melo.</span>
+        <span>Feito para transformar dados em valor.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
