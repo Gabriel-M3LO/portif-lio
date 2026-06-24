@@ -3,9 +3,11 @@
 // ── Particles
 (function initParticles() {
   const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
   let particles = [];
   let W, H;
+  let mouse = { x: null, y: null, radius: 150 };
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -13,6 +15,15 @@
   }
   resize();
   window.addEventListener('resize', resize);
+  
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.x;
+    mouse.y = e.y;
+  });
+  window.addEventListener('mouseout', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
 
   class Particle {
     constructor() { this.reset(); }
@@ -20,14 +31,38 @@
       this.x = Math.random() * W;
       this.y = Math.random() * H;
       this.r = Math.random() * 1.5 + 0.3;
+      this.baseX = this.x;
+      this.baseY = this.y;
       this.vx = (Math.random() - 0.5) * 0.3;
       this.vy = (Math.random() - 0.5) * 0.3;
-      this.alpha = Math.random() * 0.5 + 0.1;
+      this.alpha = Math.random() * 0.5 + 0.3;
     }
     update() {
       this.x += this.vx;
       this.y += this.vy;
-      if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+      if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) {
+        this.reset();
+        // Spawns them on the edges to avoid popping
+        if (Math.random() > 0.5) this.x = Math.random() > 0.5 ? 0 : W;
+        else this.y = Math.random() > 0.5 ? 0 : H;
+      }
+
+      // Mouse interaction
+      if (mouse.x != null) {
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < mouse.radius) {
+          const forceDirectionX = dx / distance;
+          const forceDirectionY = dy / distance;
+          const maxDistance = mouse.radius;
+          const force = (maxDistance - distance) / maxDistance;
+          const directionX = forceDirectionX * force * 2;
+          const directionY = forceDirectionY * force * 2;
+          this.x -= directionX;
+          this.y -= directionY;
+        }
+      }
     }
     draw() {
       ctx.beginPath();
@@ -49,8 +84,23 @@
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0,232,143,${0.06 * (1 - dist / 110)})`;
+          ctx.strokeStyle = `rgba(0,232,143,${0.2 * (1 - dist / 110)})`;
           ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+      
+      // Lines connecting to mouse
+      if (mouse.x != null) {
+        const dx = particles[i].x - mouse.x;
+        const dy = particles[i].y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.strokeStyle = `rgba(0,232,143,${0.3 * (1 - dist / 150)})`;
+          ctx.lineWidth = 0.8;
           ctx.stroke();
         }
       }
@@ -250,3 +300,67 @@ window.addEventListener('scroll', () => {
   const scrollHint = document.querySelector('.hero-scroll');
   if (scrollHint) scrollHint.style.opacity = window.scrollY > 80 ? '0' : '1';
 }, { passive: true });
+
+// ── Project Modal Logic
+(function initProjectModal() {
+  const modal = document.getElementById('project-modal');
+  const modalBody = document.getElementById('modal-body');
+  const closeBtn = document.getElementById('modal-close');
+  if (!modal) return;
+
+  const cards = document.querySelectorAll('.project-card');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Ignore if clicking a button with a link (like GitHub demo)
+      if (e.target.closest('.proj-demo')) return;
+      e.preventDefault();
+
+      // Extract elements from the card
+      const img = card.querySelector('.project-img').src;
+      const title = card.querySelector('.project-title').innerHTML;
+      const desc = card.querySelector('.project-desc').innerHTML;
+      const detailGrid = card.querySelector('.project-detail-grid') ? card.querySelector('.project-detail-grid').outerHTML : '';
+      const tech = card.querySelector('.project-tech') ? card.querySelector('.project-tech').outerHTML : '';
+      const results = card.querySelector('.project-results') ? card.querySelector('.project-results').outerHTML : '';
+      
+      // Clone actions (excluding "Saiba Mais")
+      const actionsEl = card.querySelector('.project-actions');
+      let actionsHTML = '';
+      if (actionsEl) {
+        const clonedActions = actionsEl.cloneNode(true);
+        const saibaMaisBtn = clonedActions.querySelector('.proj-code');
+        if (saibaMaisBtn) saibaMaisBtn.remove();
+        actionsHTML = clonedActions.outerHTML;
+      }
+
+      // Populate modal
+      modalBody.innerHTML = `
+        <img src="${img}" class="project-img" alt="${title}" />
+        <h3 class="project-title">${title}</h3>
+        <p class="project-desc">${desc}</p>
+        ${detailGrid}
+        ${tech}
+        ${results}
+        ${actionsHTML}
+      `;
+
+      // Show modal
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+  });
+})();

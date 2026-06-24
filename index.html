@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
@@ -187,111 +188,92 @@
   </section>
 
   <!-- ========== SKILLS ========== -->
-  <section id="skills" class="section section-dark">
-    <div class="container">
+  <section id="skills" class="section section-dark" style="position:relative; overflow:hidden;">
+    <canvas id="skills-canvas" style="position:absolute; inset:0; z-index:0;"></canvas>
+    <div class="container" style="position:relative; z-index:2;">
       <div class="section-header">
-        <span class="section-tag">// skills.json</span>
+        <span class="section-tag">// stack.config</span>
         <h2 class="section-title">Stack <span class="gradient-text">Técnica</span></h2>
-        <p class="section-sub">Ferramentas e tecnologias que uso para construir sistemas web robustos e automações eficientes</p>
+        <p class="section-sub">Tecnologias que uso para construir sistemas web e automações</p>
       </div>
-      <div class="skills-grid">
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <h3>Backend &amp; Web</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item" data-level="90">
-              <div class="skill-info"><span class="skill-name">Python (FastAPI / Flask)</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item" data-level="85">
-              <div class="skill-info"><span class="skill-name">APIs REST &amp; Integrações</span><span class="skill-pct">88%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="88%"></div></div>
-            </div>
-            <div class="skill-item" data-level="82">
-              <div class="skill-info"><span class="skill-name">SQLAlchemy / ORM</span><span class="skill-pct">82%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="82%"></div></div>
-            </div>
-            <div class="skill-item" data-level="70">
-              <div class="skill-info"><span class="skill-name">Frontend (Vue / Next.js)</span><span class="skill-pct">70%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="70%"></div></div>
-            </div>
-          </div>
+      <div class="stacks-grid">
+        <!-- Backend -->
+        <div class="stack-card">
+          <i class="devicon-python-plain"></i>
+          <span>Python</span>
         </div>
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <h3>Automação &amp; ETL</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item" data-level="88">
-              <div class="skill-info"><span class="skill-name">Web Scraping (requests / bs4)</span><span class="skill-pct">88%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="88%"></div></div>
-            </div>
-            <div class="skill-item" data-level="85">
-              <div class="skill-info"><span class="skill-name">Pandas / ETL Python</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="85%"></div></div>
-            </div>
-            <div class="skill-item" data-level="80">
-              <div class="skill-info"><span class="skill-name">N8N / Automação de Fluxos</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item" data-level="72">
-              <div class="skill-info"><span class="skill-name">Azure Data Factory / Pipelines</span><span class="skill-pct">75%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="75%"></div></div>
-            </div>
-          </div>
+        <div class="stack-card">
+          <i class="devicon-fastapi-plain"></i>
+          <span>FastAPI</span>
         </div>
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <h3>Banco de Dados</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item" data-level="90">
-              <div class="skill-info"><span class="skill-name">SQL (T-SQL / PL-SQL)</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item" data-level="82">
-              <div class="skill-info"><span class="skill-name">PostgreSQL</span><span class="skill-pct">82%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="82%"></div></div>
-            </div>
-            <div class="skill-item" data-level="75">
-              <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-pct">75%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="75%"></div></div>
-            </div>
-            <div class="skill-item" data-level="65">
-              <div class="skill-info"><span class="skill-name">MongoDB</span><span class="skill-pct">65%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="65%"></div></div>
-            </div>
-          </div>
+        <div class="stack-card">
+          <i class="devicon-flask-original"></i>
+          <span>Flask</span>
         </div>
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <h3>Infraestrutura &amp; Cloud</h3>
-          </div>
-          <div class="skill-list">
-            <div class="skill-item" data-level="90">
-              <div class="skill-info"><span class="skill-name">Git / GitHub</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item" data-level="80">
-              <div class="skill-info"><span class="skill-name">Docker / Deploy Containerizado</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item" data-level="78">
-              <div class="skill-info"><span class="skill-name">Microsoft Azure (App Service / Blob)</span><span class="skill-pct">78%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="78%"></div></div>
-            </div>
-            <div class="skill-item" data-level="75">
-              <div class="skill-info"><span class="skill-name">OpenAI API / IA Generativa</span><span class="skill-pct">75%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="width:0%" data-width="75%"></div></div>
-            </div>
-          </div>
+        <div class="stack-card">
+          <i class="devicon-sqlalchemy-plain"></i>
+          <span>SQLAlchemy</span>
         </div>
-
+        <!-- Bancos -->
+        <div class="stack-card">
+          <i class="devicon-mysql-plain"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-postgresql-plain"></i>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-oracle-original"></i>
+          <span>Oracle</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-mongodb-plain"></i>
+          <span>MongoDB</span>
+        </div>
+        <!-- Cloud & Infra -->
+        <div class="stack-card">
+          <i class="devicon-azure-plain"></i>
+          <span>Azure</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-docker-plain"></i>
+          <span>Docker</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-git-plain"></i>
+          <span>Git</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-github-original"></i>
+          <span>GitHub</span>
+        </div>
+        <!-- Frontend & Ferramentas -->
+        <div class="stack-card">
+          <i class="devicon-vuejs-plain"></i>
+          <span>Vue.js</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-nextjs-plain"></i>
+          <span>Next.js</span>
+        </div>
+        <div class="stack-card">
+          <i class="devicon-figma-plain"></i>
+          <span>Figma</span>
+        </div>
+        <!-- Data & Automação -->
+        <div class="stack-card">
+          <i class="devicon-pandas-plain"></i>
+          <span>Pandas</span>
+        </div>
+        <div class="stack-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="stack-svg-icon"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3 5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm6 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+          <span>N8N</span>
+        </div>
+        <div class="stack-card">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="stack-svg-icon"><path d="M22.28 9.37a5.99 5.99 0 0 0-.52-4.93 6.07 6.07 0 0 0-6.54-2.88A5.99 5.99 0 0 0 10.69 0a6.07 6.07 0 0 0-5.78 4.18A5.99 5.99 0 0 0 .93 7.47a6.07 6.07 0 0 0 .75 7.16 5.99 5.99 0 0 0 .52 4.93 6.07 6.07 0 0 0 6.54 2.88A5.99 5.99 0 0 0 13.31 24a6.07 6.07 0 0 0 5.78-4.18 5.99 5.99 0 0 0 3.98-3.29 6.07 6.07 0 0 0-.75-7.16zM13.31 22.44a4.49 4.49 0 0 1-2.88-1.05l.14-.08 4.8-2.77a.78.78 0 0 0 .39-.68v-6.77l2.03 1.17a.07.07 0 0 1 .04.06v5.6a4.51 4.51 0 0 1-4.52 4.52zM3.54 18.33a4.49 4.49 0 0 1-.54-3.02l.14.08 4.8 2.77a.78.78 0 0 0 .78 0l5.86-3.38v2.34a.07.07 0 0 1-.03.06l-4.85 2.8a4.51 4.51 0 0 1-6.16-1.65zM2.34 7.89A4.49 4.49 0 0 1 4.69 5.9v5.69a.78.78 0 0 0 .39.68l5.86 3.38-2.03 1.17a.07.07 0 0 1-.07 0L3.99 13.99a4.51 4.51 0 0 1-1.65-6.1zM19.43 11.92l-5.86-3.38 2.03-1.17a.07.07 0 0 1 .07 0l4.85 2.8a4.51 4.51 0 0 1-.7 8.14v-5.71a.78.78 0 0 0-.39-.68zM21.46 8.7l-.14-.08-4.8-2.77a.78.78 0 0 0-.78 0L9.88 9.23V6.89a.07.07 0 0 1 .03-.06l4.85-2.8a4.51 4.51 0 0 1 6.7 4.67zM8.72 12.54l-2.03-1.17a.07.07 0 0 1-.04-.06V5.71A4.51 4.51 0 0 1 14.05 2.6l-.14.08-4.8 2.77a.78.78 0 0 0-.39.68v6.41zm1.1-2.37L12 8.79l2.18 1.26v2.52L12 13.83l-2.18-1.26V10.05z"/></svg>
+          <span>OpenAI</span>
+        </div>
       </div>
     </div>
   </section>
@@ -812,6 +794,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <div class="modal-close" id="modal-close">&times;</div>
+      <div class="modal-body" id="modal-body">
+        <!-- Content will be injected here via JS -->
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
