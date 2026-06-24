@@ -77,30 +77,46 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <div class="terminal-dots">
-            <span class="t-dot t-close"></span>
-            <span class="t-dot t-minimize"></span>
-            <span class="t-dot t-maximize"></span>
+      <div class="data-card card-1">
+        <div class="card-header">
+          <span class="card-dot green"></span>
+          <span class="card-dot yellow"></span>
+          <span class="card-dot red"></span>
+        </div>
+        <div class="card-content">
+          <div class="code-line"><span class="kw">import</span> fastapi <span class="kw">as</span> fa</div>
+          <div class="code-line"><span class="kw">from</span> automator <span class="kw">import</span> run</div>
+          <div class="code-line blank"></div>
+          <div class="code-line"><span class="fn">app</span> = fa.FastAPI()</div>
+          <div class="code-line"><span class="cm"># Otimizando processos ↓</span></div>
+          <div class="code-line"><span class="fn">app</span>.add_event(<span class="str">'auto'</span>)</div>
+        </div>
+      </div>
+      <div class="data-card card-2">
+        <div class="mini-chart">
+          <div class="chart-title">Eficiência Operacional</div>
+          <div class="bar-chart">
+            <div class="bar" style="height:40%" data-val="12h"></div>
+            <div class="bar" style="height:65%" data-val="18h"></div>
+            <div class="bar" style="height:50%" data-val="15h"></div>
+            <div class="bar active" style="height:90%" data-val="28h"></div>
+            <div class="bar" style="height:75%" data-val="22h"></div>
+            <div class="bar" style="height:85%" data-val="26h"></div>
           </div>
-          <span class="terminal-title">gabriel@dev:~/portfolio</span>
+          <div class="chart-label">↑ 43% vs processo manual</div>
         </div>
-        <div class="terminal-body">
-          <div class="term-line"><span class="term-prompt">$</span> <span class="kw">python</span> -m uvicorn main:app --reload</div>
-          <div class="term-line term-output"><span class="term-info">INFO</span>: Uvicorn running on <span class="str">http://0.0.0.0:8000</span></div>
-          <div class="term-line term-output"><span class="term-success">✓</span> Application startup complete.</div>
-          <div class="term-line"></div>
-          <div class="term-line"><span class="term-prompt">$</span> <span class="kw">cat</span> stats.json</div>
-          <div class="term-line term-output">{</div>
-          <div class="term-line term-output">&nbsp;&nbsp;<span class="fn">"apis_deployed"</span>: <span class="str">5</span>,</div>
-          <div class="term-line term-output">&nbsp;&nbsp;<span class="fn">"automations"</span>: <span class="str">12</span>,</div>
-          <div class="term-line term-output">&nbsp;&nbsp;<span class="fn">"uptime"</span>: <span class="str">"99.8%"</span>,</div>
-          <div class="term-line term-output">&nbsp;&nbsp;<span class="fn">"manual_hours_saved"</span>: <span class="str">"2400+"</span></div>
-          <div class="term-line term-output">}</div>
-          <div class="term-line"></div>
-          <div class="term-line"><span class="term-prompt">$</span> <span class="term-cursor-block">_</span></div>
+      </div>
+      <div class="data-card card-3">
+        <div class="kpi-grid">
+          <div class="kpi"><span class="kpi-value">98%</span><span class="kpi-label">Confiabilidade</span></div>
+          <div class="kpi"><span class="kpi-value">2.4x</span><span class="kpi-label">Velocidade</span></div>
         </div>
+      </div>
+      <div class="hero-orbit">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-dot dot-1"></div>
+        <div class="orbit-dot dot-2"></div>
       </div>
     </div>
     <div class="hero-scroll">
@@ -677,20 +693,6 @@
             </div>
           </div>
 
-          <div class="testimonial-card" id="test-1">
-            <div class="test-quote">"</div>
-            <p class="test-text">Tive a oportunidade de trabalhar com Gabriel e posso destacar sua 
-              excelente comunicação, sua eficiência na resolução de problemas e sua facilidade em contribuir 
-              de forma prática para o desenvolvimento das atividades da equipe.</p>
-            <div class="test-author">
-              <div class="test-avatar">H</div>
-              <div>
-                <strong>Gabriel Araujo</strong>
-                <span>Analista Pleno – Gestão Correta Consultoria</span>
-              </div>
-            </div>
-          </div>
-
           <div class="testimonial-card" id="test-2">
             <div class="test-quote">"</div>
             <p class="test-text">Gabriel é um profissional analítico, detalhista e com uma vontade de 
@@ -709,7 +711,6 @@
       <div class="test-dots" id="test-dots">
         <button class="test-dot active" data-idx="0" id="dot-0"></button>
         <button class="test-dot" data-idx="1" id="dot-1"></button>
-        <button class="test-dot" data-idx="2" id="dot-2"></button>
       </div>
     </div>
   </section>
